@@ -6,5 +6,5 @@
 	android:minResizeWidth="144dip"
 	android:updatePeriodMillis="1000"
 	android:initialLayout="@layout/Widget"
-	android:previewImage="@drawable/mokapotwireframe"
+	android:previewImage="@drawable/preview_image"
 />

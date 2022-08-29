@@ -2,4 +2,6 @@
 <resources>
   <string name="hello">This does nothing.</string>
   <string name="app_name">My Moka Widget</string>
+  <string name="default_text"></string>
+  <string name="default_timer">Time brewing: 00:00</string>
 </resources>

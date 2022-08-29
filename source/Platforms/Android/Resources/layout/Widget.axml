@@ -7,16 +7,34 @@
     android:layout_height="match_parent">
   <RelativeLayout android:layout_width="72dip"
                   android:layout_height="fill_parent">
-    <ImageView
-        android:id="@+id/widgetAnnouncementIcon"
-        android:src="@drawable/MokaPotWireframe" />
+    <ImageView android:id="@+id/widgetMokaIcon"
+               android:src="@drawable/moka_wireframe"
+               android:layout_width="35dip"
+               android:layout_height="35dip"
+               android:layout_marginLeft="15dip"
+               android:layout_marginTop="20dip"/>
   </RelativeLayout>
-  <LinearLayout>
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="216dp"
+    android:layout_height="match_parent">
+
     <TextView
-        android:id="@+id/widgetMedium"
-        android:text="HelloAppWidget" />
+      android:id="@+id/widgetMedium"
+      android:text="@string/default_text"
+      android:textColor="#003082"
+      android:textAppearance="?android:attr/textAppearanceMedium"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp" />
+
     <TextView
-        android:id="@+id/widgetSmall"
-        android:text="Last refresh: 00:00" />
+      android:id="@+id/widgetSmall"
+      android:text="@string/default_timer"
+      android:textColor="#003082"
+      android:textAppearance="?android:attr/textAppearanceSmall"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="5dp"  />
   </LinearLayout>
 </LinearLayout>

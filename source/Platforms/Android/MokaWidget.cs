@@ -10,6 +10,8 @@ namespace SuessLabs.MokaWidget
   [MetaData("android.appwidget.provider", Resource = "@xml=appwidgetprovider")]
   public class MokaWidget : AppWidgetProvider
   {
+    private const string IconClick = "IconClick";
+
     public override void OnReceive(Context context, Intent intent)
     {
       base.OnReceive(context, intent);
@@ -21,19 +23,37 @@ namespace SuessLabs.MokaWidget
 
       // TODO: Refactor as, nameof(MokaWidget)
       var component = new ComponentName(context, Java.Lang.Class.FromType(typeof(MokaWidget)).Name);
-      appWidgetManager.UpdateAppWidget(component, BuildRemoteViews(context, appWidgetIds));
+      appWidgetManager.UpdateAppWidget(component, InitRemoteViews(context, appWidgetIds));
     }
 
-    private RemoteViews BuildRemoteViews(Context context, int[] appWidgetIds)
+    private RemoteViews InitRemoteViews(Context context, int[] appWidgetIds)
     {
       var widgetView = new RemoteViews(context.PackageName, Resource.Layout.Widget);
 
+      // Set Sample TextView Text
       widgetView.SetTextViewText(Resource.Id.widgetMedium, "HelloAppWidget");
       widgetView.SetTextViewText(Resource.Id.widgetSmall, string.Format("Last update: {0:H:mm:ss}", DateTime.Now));
 
-      //// RegisterClicks(context, appWidgetIds, widgetView);
+      // Register OnClick of widget
+      var intent = new Intent(context, typeof(MokaWidget));
+      intent.SetAction(AppWidgetManager.ActionAppwidgetUpdate);
+      intent.PutExtra(AppWidgetManager.ExtraAppwidgetId, appWidgetIds);
+
+      // Click event of the main background
+      var pendingIntent = PendingIntent.GetBroadcast(context, 0, intent, PendingIntentFlags.UpdateCurrent);
+      widgetView.SetOnClickPendingIntent(Resource.Id.widgetBackground, pendingIntent);
+
+      // Click event of the Icon
+      widgetView.SetOnClickPendingIntent(Resource.Id.widgetMokaIcon, IconPendingIntent(context, IconClick));
 
       return widgetView;
+    }
+
+    private PendingIntent IconPendingIntent(Context context, string action)
+    {
+      var intent = new Intent(context, typeof(MokaWidget));
+      intent.SetAction(action);
+      return PendingIntent.GetBroadcast(context, 0, intent, 0);
     }
   }
 }
