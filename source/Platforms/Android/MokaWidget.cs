@@ -5,7 +5,7 @@ using Android.Widget;
 
 namespace SuessLabs.MokaWidget
 {
-  [BroadcastReceiver(Label = "Moka Pot Widget")]
+  [BroadcastReceiver(Label = "Moka Pot Widget", Exported = false)]
   [IntentFilter(new string[] { "android.appwidget.action.APPWIDGET_UPDATE" })]
   [MetaData("android.appwidget.provider", Resource = "@xml=appwidgetprovider")]
   public class MokaWidget : AppWidgetProvider

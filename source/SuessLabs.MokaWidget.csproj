@@ -1,9 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
-		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>
-		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+		<TargetFrameworks>net6.0-android</TargetFrameworks>
+    <!--<TargetFrameworks>net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>-->
+
+    <!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
 		<OutputType>Exe</OutputType>
 		<RootNamespace>SuessLabs.MokaWidget</RootNamespace>
@@ -48,11 +50,11 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
-	<ItemGroup>
+  <ItemGroup>
 	  <None Remove="Platforms\Android\Resources\drawable\MokaPotWireframe.png" />
 	  <None Remove="Platforms\Android\Resources\layout\Main.axml" />
 	  <None Remove="Platforms\Android\Resources\values\Strings.xml" />
-	  <None Remove="Platforms\Android\Resources\XML\appwidgetprovider.xml" />
+	  <None Remove="Platforms\Android\Resources\xml\appwidgetprovider.xml" />
 	</ItemGroup>
 
 </Project>
