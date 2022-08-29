@@ -14,3 +14,7 @@ Simple features
 
 * [ ] Click to start
 * [ ] Customize timer preferences
+
+## References
+
+* [Xamarin Simple Widget](https://github.com/xamarin/monodroid-samples/tree/main/SimpleWidget)

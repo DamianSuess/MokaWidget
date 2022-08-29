@@ -1,4 +1,8 @@
-﻿using Android.App;
+﻿// To debug the application, you must include the following.
+// Otherwise, it will exit out after uploading.
+#if DEBUG
+
+using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using Android.Widget;
@@ -22,3 +26,5 @@ public class MainActivity : MauiAppCompatActivity
     Finish();
   }
 }
+
+#endif
