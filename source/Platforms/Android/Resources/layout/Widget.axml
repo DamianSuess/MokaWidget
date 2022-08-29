@@ -9,10 +9,11 @@
                   android:layout_height="fill_parent">
     <ImageView android:id="@+id/widgetMokaIcon"
                android:src="@drawable/moka_wireframe"
+               android:contentDescription="@string/default_text"
                android:layout_width="35dip"
                android:layout_height="35dip"
                android:layout_marginLeft="15dip"
-               android:layout_marginTop="20dip"/>
+               android:layout_marginTop="20dip" />
   </RelativeLayout>
   <LinearLayout
     android:orientation="vertical"
@@ -35,6 +36,6 @@
       android:textAppearance="?android:attr/textAppearanceSmall"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_marginTop="5dp"  />
+      android:layout_marginTop="5dp" />
   </LinearLayout>
 </LinearLayout>

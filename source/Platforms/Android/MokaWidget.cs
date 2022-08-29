@@ -7,7 +7,7 @@ namespace SuessLabs.MokaWidget
 {
   [BroadcastReceiver(Label = "Moka Pot Widget", Exported = false)]
   [IntentFilter(new string[] { "android.appwidget.action.APPWIDGET_UPDATE" })]
-  [MetaData("android.appwidget.provider", Resource = "@xml=appwidgetprovider")]
+  [MetaData("android.appwidget.provider", Resource = "@xml=app_widget")]
   public class MokaWidget : AppWidgetProvider
   {
     private const string IconClick = "IconClick";
@@ -31,7 +31,7 @@ namespace SuessLabs.MokaWidget
       var widgetView = new RemoteViews(context.PackageName, Resource.Layout.Widget);
 
       // Set Sample TextView Text
-      widgetView.SetTextViewText(Resource.Id.widgetMedium, "HelloAppWidget");
+      widgetView.SetTextViewText(Resource.Id.widgetMedium, "Moka Pot Timer");
       widgetView.SetTextViewText(Resource.Id.widgetSmall, string.Format("Last update: {0:H:mm:ss}", DateTime.Now));
 
       // Register OnClick of widget

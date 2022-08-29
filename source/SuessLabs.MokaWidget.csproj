@@ -55,7 +55,7 @@
 	  <None Remove="Platforms\Android\Resources\drawable\preview_image.jpg" />
 	  <None Remove="Platforms\Android\Resources\layout\Main.axml" />
 	  <None Remove="Platforms\Android\Resources\values\Strings.xml" />
-	  <None Remove="Platforms\Android\Resources\xml\appwidgetprovider.xml" />
+	  <None Remove="Platforms\Android\Resources\xml\app_widget.xml" />
 	</ItemGroup>
 
 </Project>
