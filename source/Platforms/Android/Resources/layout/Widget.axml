@@ -24,19 +24,19 @@
     android:layout_width="216dp"
     android:layout_height="match_parent">
 
-    <!-- android:textAppearance="?android:attr/textAppearanceMedium" -->
     <TextView
       android:id="@+id/widgetMedium"
       android:text="@string/default_text"
+      android:textAppearance="?android:attr/textAppearanceMedium"
       android:textColor="#003082"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginTop="5dp" />
 
-    <!-- android:textAppearance="?android:attr/textAppearanceSmall" -->
     <TextView
       android:id="@+id/widgetSmall"
-      android:text="@string/default_timer"
+      android:text="@string/default_text"
+      android:textAppearance="?android:attr/textAppearanceSmall"
       android:textColor="#003082"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
