@@ -17,7 +17,7 @@
 		<ApplicationTitle>SuessLabs.MokaWidget</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.suesslabs.mokawidget</ApplicationId>
+		<ApplicationId>com.suesslabs.mokawidget</ApplicationId>
 		<ApplicationIdGuid>A9135E8E-6E1E-4667-8509-2A96235501CE</ApplicationIdGuid>
 
 		<!-- Versions -->

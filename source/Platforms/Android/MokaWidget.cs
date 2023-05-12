@@ -19,6 +19,7 @@ namespace SuessLabs.MokaWidget
       switch (intent.Action)
       {
         case IconClick:
+          //// StartStopTimer();
           LaunchSettings(context);
           break;
 
