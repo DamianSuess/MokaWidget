@@ -18,3 +18,4 @@ Simple features
 ## References
 
 * [Xamarin Simple Widget](https://github.com/xamarin/monodroid-samples/tree/main/SimpleWidget)
+* Untested: [1](https://github.com/beardboy/Maui.Widgets), [2](https://learn.microsoft.com/en-us/answers/questions/1331834/android-home-screen-widget-with-net-maui)
